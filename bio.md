@@ -1,0 +1,1 @@
+I am a photographer and writer based on Portland, Oregon. My work focuses on narrative nonfiction and photo-driven storytelling.

@@ -1,0 +1,23 @@
+# .gitignore — tells Git which files to IGNORE (not track or upload)
+
+# macOS system files (automatically created by Finder)
+.DS_Store
+.DS_Store?
+._*
+.Spotlight-V100
+.Trashes
+
+# Windows system files
+Thumbs.db
+ehthumbs.db
+
+# Editor files (VS Code settings, etc.)
+.vscode/
+.idea/
+
+# Local tooling config (not for publishing)
+.claude/
+
+# Any local notes you don't want published
+notes.txt
+TODO.txt

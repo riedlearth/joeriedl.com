@@ -1,0 +1,133 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Projects — Joe Riedl</title>
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    html, body {
+      background: #000;
+      font-family: 'Georgia', serif;
+      color: #fff;
+    }
+
+    nav {
+      position: fixed;
+      top: 0;
+      left: 0;
+      right: 0;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      padding: 24px 28px;
+      z-index: 10;
+      mix-blend-mode: difference;
+      font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif;
+      font-size: 16px;
+      letter-spacing: 0.1em;
+      font-weight: normal;
+    }
+
+    nav a {
+      color: #fff;
+      text-decoration: none;
+      font-size: 16px;
+    }
+
+    #name {
+      font-size: 24px;
+    }
+
+    .description {
+      padding: 110px 28px 48px;
+      font-size: 22px;
+      line-height: 1.6;
+      color: #fff;
+    }
+
+    .description h2 {
+      font-size: 11px;
+      font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif;
+      font-weight: normal;
+      letter-spacing: 0.15em;
+      text-transform: uppercase;
+      color: #888;
+      margin-bottom: 20px;
+    }
+
+    .gallery {
+      padding: 0 28px 80px;
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 6px;
+    }
+
+    .gallery img {
+      width: 100%;
+      height: auto;
+      display: block;
+    }
+
+    .gallery img.landscape {
+      grid-column: span 2;
+    }
+
+    .gallery img.full-width {
+      grid-column: span 3;
+    }
+  </style>
+</head>
+<body>
+
+  <nav>
+    <a id="name" href="index.html">Joe Riedl</a>
+    <div>
+      <a href="about.html">About</a>
+      &nbsp;&nbsp;&nbsp;
+      <a href="writing.html">Writing</a>
+      &nbsp;&nbsp;&nbsp;
+      <a href="projects.html">Projects</a>
+      &nbsp;&nbsp;&nbsp;
+      <a href="contact.html">Contact</a>
+    </div>
+  </nav>
+
+  <div class="description">
+    <h2>Mobile Photography 2025–2026</h2>
+    <p>Taking a photograph is easier now than it ever has been. Try going a day without seeing someone capture an image, or, for that matter, doing so yourself. It may be difficult. The action has taken precedence over the product. That is, we often take photographs not to produce an image but for the sake of taking a photograph itself. Whereas before, photographs had depth (in that there was something within it worth finding), most have now been rendered flat. Yet the iPhone has created a profound possibility — to make photographs without the burden of doing so in the presence of a camera. Over the past six months, I have captured moments with my iPhone, a process called "mobile" photography among photographers. Many have been bad, but others tell a unique story. In processing the photographs, I have flattened them as much as I can (that is, reducing the highlights and increasing the shadows). Still, there is depth and story.</p>
+  </div>
+
+  <div class="gallery">
+    <img src="images/mobile/mobile_25_26.jpg" alt="">
+    <img src="images/mobile/mobile_25_26-2.jpg" alt="">
+    <img src="images/mobile/mobile_25_26-3.jpg" alt="">
+    <img src="images/mobile/mobile_25_26-43.jpg" alt="" class="landscape">
+    <img src="images/mobile/mobile_25_26-5.jpg" alt="">
+    <img src="images/mobile/mobile_25_26-6.jpg" alt="">
+    <img src="images/mobile/mobile_25_26-7.jpg" alt="">
+    <img src="images/mobile/mobile_25_26-9.jpg" alt="">
+    <img src="images/mobile/mobile_25_26-11.jpg" alt="">
+    <img src="images/mobile/mobile_25_26-12.jpg" alt="">
+    <img src="images/mobile/mobile_25_26-14.jpg" alt="">
+    <img src="images/mobile/mobile_25_26-18.jpg" alt="">
+    <img src="images/mobile/mobile_25_26-19.jpg" alt="">
+    <img src="images/mobile/mobile_25_26-20.jpg" alt="">
+    <img src="images/mobile/mobile_25_26-21.jpg" alt="">
+    <img src="images/mobile/mobile_25_26-25.jpg" alt="">
+    <img src="images/mobile/mobile_25_26-26.jpg" alt="">
+    <img src="images/mobile/mobile_25_26-27.jpg" alt="" class="landscape">
+    <img src="images/mobile/mobile_25_26-30.jpg" alt="">
+    <img src="images/mobile/mobile_25_26-32.jpg" alt="">
+    <img src="images/mobile/mobile_25_26-34.jpg" alt="">
+    <img src="images/mobile/mobile_25_26-36.jpg" alt="">
+    <img src="images/mobile/mobile_25_26-35.jpg" alt="" class="full-width">
+  </div>
+
+</body>
+</html>

@@ -1,0 +1,155 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Joe Riedl</title>
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    html, body {
+      height: 100%;
+      overflow: hidden;
+      background: #fff;
+      color: #000;
+      font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif;
+      text-transform: uppercase;
+    }
+
+    .page {
+      height: 100vh;
+      display: flex;
+      flex-direction: column;
+      padding: 8px 22px 18px;
+    }
+
+    .top-row {
+      display: flex;
+      justify-content: space-between;
+      align-items: baseline;
+      font-size: 10px;
+      letter-spacing: 0.14em;
+      margin-bottom: 18px;
+    }
+
+    .top-row a {
+      color: inherit;
+      text-decoration: none;
+    }
+
+    h1 {
+      font-size: clamp(52px, 7.5vw, 108px);
+      font-weight: 700;
+      line-height: 0.88;
+      letter-spacing: -0.01em;
+      margin-bottom: 18px;
+    }
+
+    h1 a {
+      color: inherit;
+      text-decoration: none;
+    }
+
+    .sub-row {
+      display: flex;
+      justify-content: space-between;
+      align-items: baseline;
+      font-size: 10px;
+      letter-spacing: 0.14em;
+    }
+
+    .sub-row a {
+      color: inherit;
+      text-decoration: none;
+    }
+
+    .spread {
+      word-spacing: 4.8em;
+    }
+
+    .image-wrap {
+      flex: 1;
+      min-height: 0;
+      margin-top: 11px;
+      position: relative;
+    }
+
+    .image-wrap img {
+      position: absolute;
+      inset: 0;
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      transition: opacity 3s ease;
+    }
+  </style>
+</head>
+<body>
+  <div class="page">
+
+    <div class="top-row">
+      <span>Journalism</span>
+      <a href="mailto:joe@riedl.earth">Get in touch</a>
+    </div>
+
+    <h1><a href="index.html">Joe Riedl</a></h1>
+
+    <div class="sub-row">
+      <span>Award winning journalism</span>
+      <span class="spread">Environment Geography Land Climate</span>
+      <a href="about.html">About</a>
+    </div>
+
+    <div class="image-wrap">
+      <img id="hero-a" src="images/photo_gallery/000012410034.jpg" alt="">
+      <img id="hero-b" src="images/photo_gallery/1-27.jpg" alt="" style="opacity:0;">
+    </div>
+
+  </div>
+
+  <script>
+    const images = [
+      'images/photo_gallery/000012410034.jpg',
+      'images/photo_gallery/1-27.jpg',
+      'images/photo_gallery/RT-38.jpg',
+      'images/photo_gallery/1-58.jpg',
+      'images/photo_gallery/Y-22.jpg',
+      'images/photo_gallery/3-33.jpg',
+      'images/photo_gallery/ScanImage52390.jpg',
+      'images/photo_gallery/1-53.jpg',
+      'images/photo_gallery/000021770011.jpg',
+      'images/photo_gallery/2-15.jpg',
+      'images/photo_gallery/ScanImage52389.jpg',
+      'images/photo_gallery/1-32.jpg',
+      'images/photo_gallery/1-56.jpg',
+      'images/photo_gallery/1-7.jpg',
+    ];
+
+    const imgA = document.getElementById('hero-a');
+    const imgB = document.getElementById('hero-b');
+    let idx = 1;
+    let showingA = true;
+
+    // Preload next image then crossfade
+    setInterval(() => {
+      const next = images[idx];
+      idx = (idx + 1) % images.length;
+
+      if (showingA) {
+        imgB.src = next;
+        imgB.style.opacity = '1';
+        imgA.style.opacity = '0';
+      } else {
+        imgA.src = next;
+        imgA.style.opacity = '1';
+        imgB.style.opacity = '0';
+      }
+      showingA = !showingA;
+    }, 4000);
+  </script>
+</body>
+</html>
